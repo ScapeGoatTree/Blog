@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="zh-cmn-hans">
 <head>
+    <script type="text/javascript"
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js">
+	</script>
+	<script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+      extensions: ["tex2jax.js"],
+      jax: ["input/TeX", "output/HTML-CSS"],
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+      },
+      "HTML-CSS": { availableFonts: ["TeX"] }
+      });
+	</script>
     <meta charset="UTF-8">
     <title><?php $this->archiveTitle(array(
             'category'  =>  _t('%s'),
@@ -8,6 +23,7 @@
             'tag'       =>  _t('标签 %s 下的文章'),
             'author'    =>  _t('%s 发布的文章')
         ), '', ' - '); $this->options->title(); ?></title>
+	
 <?php if ($this->options->favicon): ?>
     <link rel="icon" href="<?php $this->options->favicon() ?>" sizes="192x192"/>
 <?php else: ?>
@@ -21,10 +37,6 @@
 <?php if ($this->options->custom_css): ?>
     <style><?php $this->options->custom_css() ?></style>
 <?php endif; ?>
-
-<script type="text/javascript"
-    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js">
- </script>
 </head>
 <body>
 <aside>
