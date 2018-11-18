@@ -21,6 +21,10 @@
 <?php if ($this->options->custom_css): ?>
     <style><?php $this->options->custom_css() ?></style>
 <?php endif; ?>
+
+<script type="text/javascript"
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js">
+ </script>
 </head>
 <body>
 <aside>
