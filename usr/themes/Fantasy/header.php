@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="zh-cmn-hans">
 <head>
-    <script type="text/javascript"
-    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js">
-	</script>
-	<script type="text/x-mathjax-config">
+    </script>
+<script src="https://cdn.staticfile.org/highlight.js/9.13.1/highlight.min.js"></script>
+<link rel="stylesheet"
+      href="https://cdn.staticfile.org/highlight.js/9.13.1/styles/tomorrow-night-bright.min.css">
+<script>hljs.initHighlightingOnLoad()</script>
+ <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
       extensions: ["tex2jax.js"],
       jax: ["input/TeX", "output/HTML-CSS"],
@@ -15,6 +17,10 @@
       },
       "HTML-CSS": { availableFonts: ["TeX"] }
       });
+</script>
+ <script type="text/javascript"
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js">
+ </script>
 	</script>
     <meta charset="UTF-8">
     <title><?php $this->archiveTitle(array(
